@@ -1,59 +1,38 @@
-# DatabridgeSolutionsWebsite
+# DataBridge Solutions Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+A one-page marketing site for DataBridge Solutions, a (concept) agency that
+offers digital marketing, CRM, SEO and process automation to banks. The page
+has a hero section, services, pricing plans, benefits, and a contact form.
 
-## Development server
+It is built with Angular 20 and deployed to GitHub Pages at
+[ninjashadowboy.github.io/databridge-solutions-website](https://ninjashadowboy.github.io/databridge-solutions-website/).
 
-To start a local development server, run:
+The contact form is front-end only: it is not wired to any backend, so
+submissions are not sent anywhere.
 
-```bash
-ng serve
-```
+## Getting started
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+You need Node.js 20.19 or newer and [pnpm](https://pnpm.io) (the lockfile is
+`pnpm-lock.yaml`).
 
 ```bash
-ng generate --help
+git clone https://github.com/NinjaShadowBoy/databridge-solutions-website.git
+cd databridge-solutions-website
+pnpm install
+pnpm start                 # dev server at http://localhost:4200
 ```
 
-## Building
+## Scripts
 
-To build the project run:
+| Command | What it does |
+|---|---|
+| `pnpm start` | Dev server with live reload |
+| `pnpm build` | Production build into `dist/databridge-solutions-website/` |
+| `pnpm build:prod` | Production build with the GitHub Pages base path |
+| `pnpm test` | Unit tests with Karma and Jasmine |
+| `pnpm deploy` | Build for GitHub Pages and publish to the `gh-pages` branch |
 
-```bash
-ng build
-```
+## Where things are
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The whole page lives in the root component: `src/app/app.html` for the markup
+and `src/app/app.css` for its styles. Global styles are in `src/styles.css`.
